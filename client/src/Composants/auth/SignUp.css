@@ -1,0 +1,10 @@
+.form{
+    width: 36%;
+    margin-top: 5rem;
+    padding: 2.8rem 3.5rem;
+    border: 0.16rem solid #bebebe; 
+    border-radius: 0.5rem;
+}
+form{
+    text-align: left;
+}

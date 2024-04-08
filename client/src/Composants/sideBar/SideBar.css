@@ -1,0 +1,238 @@
+/* .red{
+    font-family: Roboto;
+font-size: 26.66px;
+font-weight: 700;
+line-height: 21.33px;
+text-align: left;
+
+}
+.sideBar{
+    width: 23%;
+    padding-bottom: 7%;
+}
+.imageSVG{
+    width: 32px;
+height: 32px;
+top: 20px;
+left: 21px;
+gap: 0px;
+opacity: 0px;
+
+}
+.principale{
+    font-family: Roboto;
+font-size: 16.8px;
+font-weight: 400;
+line-height: 47.99px;
+text-align: left;
+color: #ffffff;
+margin-left: 4%;
+}
+.nous{
+background: #45484B;
+}
+.dashbord{
+   width: 100%;
+height: 20%;
+top: 49px;
+padding: 12px 25px 12px 25px;
+gap: 26px;
+opacity: 0px;
+/* background-color: #ffffff; 
+text-decoration: none;
+
+}
+.dashbord:hover{
+    background: #ffffff;
+    /* color: #000000; 
+}
+.dashbord .imageVecteur .paraDash:hover{
+    color:#45484B ;
+}
+.imageVecteur{
+    width: 23px;
+height: 23px;
+left: 0px;
+gap: 0px;
+opacity: 5s;
+color: #ffffff;
+
+}
+.imageVecteur2{
+    width: 24px;
+height: 24px;
+padding: 0.25px 0.25px 0px 0.25px;
+gap: 0px;
+opacity: 0px;
+
+}
+.paraDash-2{
+    width: 221px;
+height: 24px;
+gap: 0px;
+opacity: 0px;
+color: #FFFFFF;
+
+}
+.hotel{
+    width: Fixed (364px)px;
+height: Hug (48px)px;
+top: 101px;
+padding: 12px 25px 12px 25px;
+gap: 26px;
+opacity: 0px;
+text-decoration: none;
+
+}
+.active-link .imageVecteur,
+.active-link .paraDash {
+    background: blue;
+}
+
+.Mouhamed{
+    width: 341.63px;
+height: 86.51px;
+margin-top: 60%;
+padding: 3%;
+gap: 0px;
+border: 1.33px 0px 0px 0px;
+opacity: 0px;
+
+}
+.imageMouhamed{
+    width: 53.33px;
+height: 53.33px;
+top: 17.33px;
+
+gap: 0px;
+border-radius: 26.66px 0px 0px 0px;
+opacity: 0px;
+
+}
+.textMouhamed{
+    width: 245.64px;
+    height: 53.18px;
+    top: 17.33px;
+    margin-left: 5%;
+    gap: 0px;
+    opacity: 0px;
+    color: #ffffff;
+    
+
+}
+.textMouhamed span{
+    font-family: Roboto;
+    font-size: 16.8px;
+    font-weight: 400;
+    line-height: 25.2px;
+    text-align: left;
+    margin-left: 2%;
+    
+
+
+} */
+.menu{
+    display: flex;
+    flex-direction: column;
+    height: 110vh;
+    width: 40vh;
+    background:#45484B ;
+   
+height: 800px;
+gap: 0px;
+opacity: 0px;
+
+
+}
+.logo{
+color: white;
+padding: 2% 2%;
+display: flex;
+}
+.logo .icon{
+    font-size: 1.4rem;
+}
+.menu-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+}
+.menu-list .item{
+    display: flex;
+    align-items: center;
+
+    font-size: 1.1rem;
+    text-decoration: none;
+
+font-weight: 600;
+padding: 2% 2%;
+border-radius: 10%;
+transition: 0.3s ease-in-out;
+}
+.principale{
+    font-family: Roboto;
+font-size: 1rem;
+font-weight: 400;
+
+text-align: left;
+color: #ffffff;
+margin-left: 2%;
+}
+.red{
+    font-family: Roboto;
+font-weight: 700;
+line-height: 21.33px;
+text-align: left;
+margin-left: 1%;
+
+}
+.menu-list p{
+    margin-left: 1%;
+}
+
+
+.Mouhamed{
+    width: 341px;
+height: 86.51px;
+padding-top: 20rem;
+padding-left: 1%;
+
+
+
+}
+.imageMouhamed{
+    width: 13%;
+height: 13%;
+
+
+
+}
+.textMouhamed{
+
+    margin-left: 5%;
+   margin-top: 2%;
+    color: #ffffff;
+    
+
+}
+.textMouhamed span{
+    font-family: Roboto;
+    font-size: 10px;
+
+    margin-left: 2%;
+    
+}
+.textMouhamed h5{
+    font-size: 14px;
+}
+/* .menu-list .item:hover{
+    background-color: #ffffff;
+    color: blue;
+   height: 30%;
+} */
+.item:active,
+.item:focus,
+.item.active-link {
+  background-color: white; /* Changement de couleur de fond lorsque le lien est activé ou en focus */
+  color: #45484B;/* Changement de couleur du texte lorsque le lien est activé ou en focus */
+}

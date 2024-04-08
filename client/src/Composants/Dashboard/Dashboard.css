@@ -1,0 +1,228 @@
+.frame h3{
+    font-family: Roboto;
+font-size: 26.66px;
+font-weight: 500;
+line-height: 74.66px;
+text-align: left;
+
+}
+.div-navbar{
+    margin-left: 4%;
+    width: 114%;
+    position: relative;
+}
+.log-out{
+    width: 24px;
+height: 24px;
+margin-left: 5%;
+
+}
+.group-search input{
+    width: 170%;
+}
+.search-input{
+    width: 279.96px;
+height: 33.99px;
+top: 27px;
+left: 1062px;
+padding: 4.94px 0px 5.06px 20.9px;
+gap: 0px;
+border-radius: 5px;
+border: 1px solid black;
+opacity: 0px;
+background: #FFFFFF;
+
+}
+.group-1124{
+    width: 270.3px;
+height: 24px;
+top: 4.94px;
+left: 20.9px;
+padding: 0px;
+gap: 0px;
+opacity: 0px;
+
+}
+.search{
+    width: 24px;
+height: 24px;
+top: 4.94px;
+left: 20.9px;
+gap: 0px;
+opacity: 0px;
+
+}
+.group-search{
+    width: 50%;
+height: 74%;
+margin-left: 18rem;
+margin-top: 3%;
+gap: 0px;
+border: 1.33px 0px 0px 0px;
+opacity: 0px;
+
+}
+.image3{
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14px;
+    text-align: center;
+    
+    width: 8.47px;
+height: 17.33px;
+top: -0.59px;
+left: 4.89px;
+gap: 0px;
+opacity: 0px;
+
+}
+.mouha{
+    width: 42px;
+    height: 74px;
+    left: 14px;
+    gap: 0px;
+    opacity: 0px;
+    
+
+}
+.symbol{
+    width: 24.4px;
+height: 24px;
+top: 25.33px;
+left: 1364.62px;
+gap: 0px;
+opacity: 0px;
+
+}
+.image3{
+    width: 17.84px;
+height: 18.17px;
+top: 17.92px;
+left: 1384.84px;
+padding: 0px 4.47px 0px 4.89px;
+gap: 0px;
+border-radius: 4.27px 0px 0px 0px;
+opacity: 0px;
+
+}
+.imageMouha{
+    width: 42.66px;
+    height: 42.66px;
+    margin-top: 15px;
+    gap: 0px;
+    border-radius: 65px;
+    opacity: 0px;
+    
+
+}
+.iconneMouha{
+    width: 15px;
+    height: 15px;
+    margin-top: 3rem;
+    margin-left: -1rem;
+    opacity: 0px;
+    border: 2.67px solid #FFFFFF    
+
+}
+.bienvenue{
+
+opacity: 0px;
+font-family: Roboto;
+font-size: 25px;
+font-weight: 300;
+line-height: 35.19px;
+text-align: left;
+
+}
+.lorem{
+  
+font-size: 0.70rem;
+
+gap: 0px;
+opacity: 0.6px;
+
+}
+.row .premierMain{
+ width: 115%;
+height: 40%;
+background-color: #ffffff;
+margin-left: 1.5%;
+box-shadow: 0px 1.3331290483474731px 0px 0px #00000008;
+
+box-shadow: 0px 2.6662580966949463px 2.6662580966949463px 0px #00000008;
+
+}
+.row-global{
+    margin-left: 2%;
+    margin-top: 3.5%;
+}
+.envelopp{
+    width: 63px;
+height: 63px;
+margin-top: 5%;
+padding-left: 20px ;
+gap: 0px;
+border-radius: 50%;
+opacity: 0px;
+background: #A88ADD;
+padding-top: 7%;
+
+}
+.imageEnvelopp{
+    width: 24px;
+height: 24px;
+
+
+}
+.main-1{
+    width: 30%;
+height: 106px;
+gap: 0px;
+border-radius: 14px 14px 14px 14px;
+opacity: 0px;
+background: #FFFFFF;
+
+}
+.clas125{
+    font-family: Roboto;
+font-size: 32px;
+font-weight: 300;
+color: #000000DE;
+
+}
+.clasSpan{
+    font-family: Roboto;
+font-size: 17px;
+font-weight: 300;
+line-height: 18.77px;
+
+color: #000000DE;
+}
+.clasSmall{
+    font-family: Roboto;
+font-size: 15px;
+font-weight: 300;
+
+color: #000000DE;
+}
+.vecteur6{
+    width: 6px;
+height: 18px;
+top: 3px;
+left: 3px;
+gap: 0px;
+border: 2px 0px 0px 0px;
+opacity: 0px;
+
+}
+.arrow{
+    width: 50%;
+}
+
+.dashboard{
+    display: flex;
+flex-wrap: wrap;
+}
+
+ 

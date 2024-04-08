@@ -1,0 +1,29 @@
+.account{
+    position: absolute;
+    margin-top: 35%;
+    display: flex;
+}
+.motDePass{
+    position: absolute;
+    margin-top: 29%;
+    color: #FFD964;
+    text-decoration: none;
+}
+.motDePass:hover{
+    color: #FFD964;
+}
+.entrez{
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+   
+    text-align: left;
+     
+}
+.linkConnexion{
+    color: #FFD964;
+    text-decoration: none;
+}
+.linkConnexion:hover{
+    color: #FFD964;
+}
