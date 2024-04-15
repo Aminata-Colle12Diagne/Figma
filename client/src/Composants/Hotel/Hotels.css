@@ -47,9 +47,9 @@ border-radius: 14px 14px 14px 14px;
    width: 20%;
    
 }
-.hotelsSidebar{
+/* .hotelsSidebar{
    height: 160vh;
-}
+} */
 .imageEnvelopp2{
    width: 85%;
    height: 130px;
@@ -126,3 +126,19 @@ font-weight: 600;
 
 
 }
+
+.dashboard2 {
+   display: flex;
+ }
+ 
+ .hotelsSidebar,
+ .dashboard-content {
+   flex: 1;
+ }
+ 
+ /* Assurez-vous de spécifier une hauteur pour chaque élément si vous le souhaitez */
+ .hotelsSidebar,
+ .dashboard-content {
+   height: 100%; /* ou une hauteur fixe en pixels */
+ }
+ 

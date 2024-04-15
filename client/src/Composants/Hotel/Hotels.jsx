@@ -24,44 +24,13 @@ function Hotels(props) {
     const [telephone, setTelephone] = useState(0);
     const [montant, setMontant] = useState(0);
 
-    // const [formData, setFormData] = useState({
-    //     nom: "",
-    //     adresse: "",
-    //     email: "",
-    //     telephone: "",
-    //     prix: "",
-    //     montant: "",
-    //     image: ""
-    // });
-    // const [modal, setModal] = useState(false);
 
     // Fonction pour ouvrir ou fermer le modal
     const toggleModal = () => {
         setModal(!modal);
     };
 
-//     // Fonction pour gérer les changements dans les champs de formulaire
-//     const handleChange = (e) => {
-//         setFormData({ ...formData, [e.target.name]: e.target.value });
-//     };
 
-//     // Fonction pour gérer le changement de l'image sélectionnée
-//     const handleImageChange = (e) => {
-//         setFormData({ ...formData, image: e.target.files[0] });
-//     };
-
-//    // Fonction pour gérer la publication de l'hôtel
-// const handlePublish = () => {
-//     if (!formData.nom || !formData.adresse || !formData.email || !formData.telephone || !formData.prix || !formData.montant || !formData.image) {
-//         alert("Veuillez remplir tous les champs");
-//         return; // Ajoutez cette ligne pour quitter la fonction si les champs ne sont pas remplis
-//     }
-//     axios.post('http://localhost:4000/addHotel' )
-//     .them((hotels)=>{
-//         setHotels(hotels.data)
-//     }).catch(err => console.log(err))
-
-//  };
 
 
 const addProduct = (e) => {
@@ -93,9 +62,12 @@ const addProduct = (e) => {
             });
     }, []);
 
+    
+
 
     return (
-        <div className='dashboard '>
+        <div className='dashboard2'>
+
             <div className="col-md-3">
             <SideBar className="hotelsSidebar"/>
             </div>
