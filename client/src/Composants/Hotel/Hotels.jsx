@@ -53,7 +53,7 @@ const addProduct = (e) => {
        
     // Utilisez useEffect pour récupérer les données des hôtels lors du chargement du composant
     useEffect(() => {
-        axios.get('http://localhost:4000/getHotels')
+        axios.get('https://projet-3-1.onrender.com/getHotels')
             .then(response => {
                 setHotels(response.data);
             })
