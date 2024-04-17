@@ -13,7 +13,7 @@ function SignUp(props) {
     const collectionData = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:5000/', {
+            const response = await fetch('http://localhost:10000/', {
                 method: 'POST',
                 body: JSON.stringify({ name, email, password }),
                 headers: {

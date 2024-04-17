@@ -6,6 +6,8 @@ const crypto = require('crypto') ;
 const cors = require('cors');
 app.use(cors());
 
+const PORT = process.env.PORT || 10000;
+
 require('./db/connection');
 const Users = require('./Model/User');
 app.post("/", async(req,res)=>{
@@ -71,6 +73,8 @@ app.post("/addHotel", async (req, res) => {
     }
 });
 
-app.listen(5000);
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Serveur démarré sur http://0.0.0.0:${PORT}`);
+});
 
 
