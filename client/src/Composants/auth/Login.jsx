@@ -11,7 +11,7 @@ function Login(props) {
     const collectionData = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:4000/', {
+            const response = await fetch('http://localhost:5000/', {
                 method: 'POST',
                 body: JSON.stringify({email, password }),
                 headers: {

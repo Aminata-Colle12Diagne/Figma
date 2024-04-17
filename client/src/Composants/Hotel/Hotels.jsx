@@ -37,7 +37,7 @@ const addProduct = (e) => {
     e.preventDefault();
 
     axios
-      .post('http://localhost:4000/addHotel', { nom, adresse, email, telephone, prix, montant, imageURL })
+      .post('http://localhost:5000/addHotel', { nom, adresse, email, telephone, prix, montant, imageURL })
       .then(() => {
         setNom("");
         setAdresse("");
@@ -53,7 +53,7 @@ const addProduct = (e) => {
        
     // Utilisez useEffect pour récupérer les données des hôtels lors du chargement du composant
     useEffect(() => {
-        axios.get('https://projet-3-1.onrender.com/getHotels')
+        axios.get('http://localhost:5000/getHotels')
             .then(response => {
                 setHotels(response.data);
             })
@@ -73,7 +73,7 @@ const addProduct = (e) => {
             </div>
 
             <div className="col-md-9">
-            <div className="dashboard-content" style={{marginLeft: "-4.3rem", width:"90%"}}>
+            <div className="dashboard-content" style={{marginLeft: "-4.3rem", width:"89%"}}>
             <div className="div-navbar d-flex" style={{width: "116%"}}>
                 <div className="frame">
                     <h3>Liste des Hotels</h3>

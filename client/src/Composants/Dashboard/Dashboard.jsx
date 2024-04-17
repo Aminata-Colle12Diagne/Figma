@@ -21,7 +21,7 @@ function Dashboard(props) {
            <SideBar />
            </div>
            <div className="col-md-9">
-           <div className="dashboard-content" style={{marginLeft: "-5rem", width:"90%"}}>
+           <div className="dashboard-content" style={{marginLeft: "-5rem", width:"89%"}}>
             <div className="div-navbar d-flex" style={{width: "117%"}}>
                 <div className="frame">
                     <h3>Dashboard</h3>
