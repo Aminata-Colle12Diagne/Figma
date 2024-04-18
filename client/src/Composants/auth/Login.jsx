@@ -20,7 +20,7 @@ function Login(props) {
             });
             const result = await response.json();
             console.log(result);
-            navigate('/sidebar');
+            navigate('/dashboard');
         } catch (error) {
             console.error(error);
         }
