@@ -53,7 +53,7 @@ const addProduct = (e) => {
        
     // Utilisez useEffect pour récupérer les données des hôtels lors du chargement du composant
     useEffect(() => {
-        axios.get('http://localhost:10000/getHotels')
+        axios.get('https://figma-server-1-e1crt1v6l-colle-diagnes-projects.vercel.app/getHotels')
             .then(response => {
                 setHotels(response.data);
             })
