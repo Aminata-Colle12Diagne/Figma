@@ -4,7 +4,11 @@ const crypto = require('crypto');
 const cors = require('cors');
 
 // Ajout du middleware pour permettre CORS
-app.use(cors());
+app.use(cors({
+    origin: "https://figma-server-2-3gptzrek7-colle-diagnes-projects.vercel.app/",
+    methods: ["GET","POST","PUT","DELETE"],
+})
+);
 
 // Middleware pour permettre de lire les données JSON dans les requêtes
 app.use(express.json());
