@@ -2,8 +2,12 @@ const express = require('express');
 const app = express();
 const crypto = require('crypto');
 const cors = require('cors');
-app.use(express.json());
+
+// Ajout du middleware pour permettre CORS
 app.use(cors());
+
+// Middleware pour permettre de lire les données JSON dans les requêtes
+app.use(express.json());
 
 const PORT = process.env.PORT || 10000;
 
