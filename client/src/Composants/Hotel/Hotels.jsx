@@ -33,22 +33,33 @@ function Hotels(props) {
 
 
 
+// Modifions la fonction addProduct pour envoyer les données correctement formatées
 const addProduct = (e) => {
     e.preventDefault();
 
     axios
-      .post('https://figma-server-1-mfopva0y3-colle-diagnes-projects.vercel.app/addHotel', { nom, adresse, email, telephone, prix, montant, imageURL })
-      .then(() => {
-        setNom("");
-        setAdresse("");
-        setEmail("");
-        setTelephone("");
-        setImageURL("");
-        setPrix(0);
-        setMontant(0);
-      })
-      .catch((error) => alert(error.message));
-  };
+        .post('https://figma-server-1-mfopva0y3-colle-diagnes-projects.vercel.app/addHotel', {
+            nom,
+            adresse,
+            email,
+            telephone,
+            prix,
+            montant,
+            imageURL
+        })
+        .then(() => {
+            // Réinitialiser les champs après l'ajout réussi
+            setNom("");
+            setAdresse("");
+            setEmail("");
+            setTelephone("");
+            setImageURL("");
+            setPrix(0);
+            setMontant(0);
+        })
+        .catch((error) => alert(error.message));
+};
+
 
        
     // Utilisez useEffect pour récupérer les données des hôtels lors du chargement du composant

@@ -13,7 +13,7 @@ function SignUp(props) {
     const collectionData = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('https://figma-server-1-mfopva0y3-colle-diagnes-projects.vercel.app/', {
+            const response = await fetch('https://figma-server-1-mfopva0y3-colle-diagnes-projects.vercel.app/signup', {
                 method: 'POST',
                 body: JSON.stringify({ name, email, password }),
                 headers: {
@@ -27,6 +27,7 @@ function SignUp(props) {
             console.error(error);
         }
     }
+    
     
     return (
         <div className='d-flex justify-content-center align-items-center vh-100' style={{ background: "#494C4F" }}>
