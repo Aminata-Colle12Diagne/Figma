@@ -11,9 +11,9 @@ function Login(props) {
     const collectionData = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('https://figma-server-7cpg92bp8-colle-diagnes-projects.vercel.app/', {
+            const response = await fetch('http://localhost:10000', {
                 method: 'POST',
-                body: JSON.stringify({ email, password }),
+                body: JSON.stringify({email, password }),
                 headers: {
                     'Content-Type': 'application/json'
                 },
@@ -25,7 +25,6 @@ function Login(props) {
             console.error(error);
         }
     }
-    
     return (
         <div className='d-flex justify-content-center align-items-center vh-100' style={{ background: "#494C4F" }}>
             <div className='bg-white p-3 rounded w-30'>
