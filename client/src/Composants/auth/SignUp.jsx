@@ -13,7 +13,7 @@ function SignUp(props) {
     const collectionData = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('https://figma-server-sigma.vercel.app/', {
+            const response = await fetch('https://figma-server-rd35etg5i-colle-diagnes-projects.vercel.app/', {
                 method: 'POST',
                 body: JSON.stringify({ name, email, password }),
                 headers: {
