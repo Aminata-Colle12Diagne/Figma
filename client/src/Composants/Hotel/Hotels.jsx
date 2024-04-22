@@ -47,7 +47,9 @@ const addProduct = (e) => {
             montant,
             imageURL
         })
-        .then(() => {
+        .then(response => {
+            // Ajouter le nouvel hôtel à l'état hotels
+            setHotels([...hotels, response.data]);
             // Réinitialiser les champs après l'ajout réussi
             setNom("");
             setAdresse("");
@@ -59,6 +61,7 @@ const addProduct = (e) => {
         })
         .catch((error) => alert(error.message));
 };
+
 
 
        
