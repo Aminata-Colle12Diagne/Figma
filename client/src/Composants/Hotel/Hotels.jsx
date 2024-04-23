@@ -38,7 +38,7 @@ const addProduct = (e) => {
     e.preventDefault();
 
     axios
-        .post('https://figma-server-1.vercel.app/addHotel', {
+        .post('https://figma-server-1-qba36n4es-colle-diagnes-projects.vercel.app/?vercelToolbarCode=cbi-VEE5tCH2f4H/addHotel', {
             nom,
             adresse,
             email,
@@ -64,7 +64,7 @@ const addProduct = (e) => {
        
     // Utilisez useEffect pour récupérer les données des hôtels lors du chargement du composant
     useEffect(() => {
-        axios.get('https://figma-server-1.vercel.app/getHotels')
+        axios.get('https://figma-server-1-qba36n4es-colle-diagnes-projects.vercel.app/?vercelToolbarCode=cbi-VEE5tCH2f4H/getHotels')
             .then(response => {
                 setHotels(response.data);
             })

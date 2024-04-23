@@ -11,7 +11,7 @@ function Login(props) {
     const collectionData = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('https://figma-server-1.vercel.app/', {
+            const response = await fetch('https://figma-server-1-qba36n4es-colle-diagnes-projects.vercel.app/?vercelToolbarCode=cbi-VEE5tCH2f4H/', {
                 method: 'POST',
                 body: JSON.stringify({email, password }),
                 headers: {
