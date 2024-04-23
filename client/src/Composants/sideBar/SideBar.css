@@ -5,6 +5,7 @@
     height: 100%;
     width: 40vh;
     background:#45484B ;
+    position: fixed;
 }
 .logo{
 color: white;
