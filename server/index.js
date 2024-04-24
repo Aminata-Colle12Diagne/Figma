@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 app.use((req, res, next) => {
     //allow access to current url. work for https as well
-    res.setHeader('Access-Control-Allow-Origin',req.header('https://figma-server-1-qba36n4es-colle-diagnes-projects.vercel.app/?vercelToolbarCode=cbi-VEE5tCH2f4H/'));
+    res.setHeader('Access-Control-Allow-Origin',req.header('Origin'));
     res.removeHeader('x-powered-by');
     //allow access to current method
     res.setHeader('Access-Control-Allow-Methods',req.method);
