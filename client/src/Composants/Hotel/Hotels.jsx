@@ -38,7 +38,7 @@ const addProduct = (e) => {
     e.preventDefault();
 
     axios
-        .post('https://figma-server-1-qba36n4es-colle-diagnes-projects.vercel.app/?vercelToolbarCode=cbi-VEE5tCH2f4H/addHotel', {
+        .post('', {
             nom,
             adresse,
             email,
