@@ -5,39 +5,71 @@ const cors = require('cors');
 
 // Ajout du middleware pour permettre CORS
 app.use(cors());
-
 app.use((req, res, next) => {
-    //allow access to current url. work for https as well
-    res.setHeader('Access-Control-Allow-Origin',req.header('Origin'));
-    res.removeHeader('x-powered-by');
-    //allow access to current method
-    res.setHeader('Access-Control-Allow-Methods',req.method);
-    res.setHeader('Access-Control-Allow-Headers','Content-Type');
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
     next();
-  })
+  });
+
 
 const PORT = process.env.PORT || 10000;
-
-
 require('./db/connection');
 const Users = require('./Model/User');
 const UserModal = require('./Model/Data');
 
+// app.get('/', (req, res) => res.send('Hello world'));
+
+
+// authentification
 app.post("/", async (req, res) => {
-    let user = new Users(req.body);
-    let result = await user.save();
-    res.send(result);
+    try {
+        // Crée un nouvel utilisateur à partir des données de la requête
+        let user = new Users(req.body);
+        // Enregistre l'utilisateur dans la base de données
+        let result = await user.save();
+        // Renvoie la réponse avec les détails de l'utilisateur créé
+        res.status(201).json(result);
+    } catch (error) {
+        // Gestion des erreurs : renvoie une réponse d'erreur avec le message approprié
+        console.error(error);
+        res.status(500).json({ message: "Erreur lors de la création de l'utilisateur" });
+    }
 });
 
 app.get("/getHotels", async (req, res) => {
-    UserModal.find({})
-        .then(function (ut) {
-            res.json(ut);
-        })
-        .catch(function (err) {
-            res.json(err);
-        });
+    try {
+        // Recherche tous les hôtels dans la base de données
+        UserModal.find({})
+            .then((hotels) => {
+                // Renvoie la liste des hôtels sous forme de réponse JSON
+                res.status(200).json(hotels);
+            })
+            .catch((error) => {
+                // Gestion des erreurs : renvoie une réponse d'erreur avec un message explicite
+                console.error(error);
+                res.status(500).json({ message: "Erreur lors de la recherche des hôtels" });
+            });
+    } catch (error) {
+        // Ce bloc ne sera jamais atteint car les erreurs asynchrones sont gérées par le .catch()
+        console.error(error);
+        res.status(500).json({ message: "Erreur lors de la recherche des hôtels" });
+    }
 });
+
+app.post("/addHotel", async (req, res) => {
+    const hotelData = req.body;
+
+    try {
+        const newHotel = new UserModal(hotelData);
+        await newHotel.save();
+        res.json(newHotel);
+    } catch (error) {
+        console.error(error);
+        res.status(500).send("Erreur lors de l'ajout des données de l'hôtel");
+    }
+});
+
 
 app.post('/forgot-password', (req, res) => {
     crypto.randomBytes(32, (err, Buffer) => {
@@ -58,26 +90,21 @@ app.post('/forgot-password', (req, res) => {
                         subject: "password reset",
                         html: `
                             <p>You requested for password reset</p>
+
                             <h5>click in this <a href="http://localhost:10000/forgot-password/${token}" >link</a>to reset password</h5>`
+
+                         
                     });
                 });
             });
     });
 });
 
-app.post("/addHotel", async (req, res) => {
-    const hotelData = req.body;
 
-    try {
-        const newHotel = new UserModal(hotelData);
-        await newHotel.save();
-        res.json(newHotel);
-    } catch (error) {
-        console.error(error);
-        res.status(500).send("Erreur lors de l'ajout des données de l'hôtel");
-    }
-});
 
-app.listen(PORT, '0.0.0.0', () => {
+app.listen(PORT, () => {
     console.log(`Serveur démarré sur http://0.0.0.0:${PORT}`);
 });
+
+// Export the Express API
+module.exports = app;
