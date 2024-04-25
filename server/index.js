@@ -78,31 +78,31 @@ app.post("/addHotel", async (req, res) => {
 });
 
 
-// app.post('/forgot-password', (req, res) => {
-//     crypto.randomBytes(32, (err, Buffer) => {
-//         if (err) {
-//             console.log(err);
-//         }
-//         const token = Buffer.toString("hex");
-//         Users.findOne({ email: req.body.email })
-//             .then(user => {
-//                 if (!user) {
-//                     return res.status(422).json({ error: "User does not exist with that email" });
-//                 }
-//                 user.resetToken = token;
-//                 user.save().then(result => {
-//                     Transporter.sendMail({
-//                         to: user.email,
-//                         from: "no-replay@insta.com",
-//                         subject: "password reset",
-//                         html: `
-//                             <p>You requested for password reset</p>
-//                             <h5>click in this <a href="https://figma-backend-mocha.vercel.app/forgot-password/${token}" >link</a>to reset password</h5>`
-//                     });
-//                 });
-//             });
-//     });
-// });
+app.post('/forgot-password', (req, res) => {
+    crypto.randomBytes(32, (err, Buffer) => {
+        if (err) {
+            console.log(err);
+        }
+        const token = Buffer.toString("hex");
+        Users.findOne({ email: req.body.email })
+            .then(user => {
+                if (!user) {
+                    return res.status(422).json({ error: "User does not exist with that email" });
+                }
+                user.resetToken = token;
+                user.save().then(result => {
+                    Transporter.sendMail({
+                        to: user.email,
+                        from: "no-replay@insta.com",
+                        subject: "password reset",
+                        html: `
+                            <p>You requested for password reset</p>
+                            <h5>click in this <a href="https://figma-backend-mocha.vercel.app/forgot-password/${token}" >link</a>to reset password</h5>`
+                    });
+                });
+            });
+    });
+});
 
 
 
