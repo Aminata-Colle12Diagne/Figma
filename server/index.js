@@ -9,14 +9,12 @@ app.use(cors());
 // Middleware pour permettre de lire les données JSON dans les requêtes
 app.use(express.json());
 app.use((req, res, next) => {
-    //allow access to current url. work for https as well
-    res.setHeader('Access-Control-Allow-Origin',req.header('Origin'));
-    res.removeHeader('x-powered-by');
-    //allow access to current method
-    res.setHeader('Access-Control-Allow-Methods',req.method);
-    res.setHeader('Access-Control-Allow-Headers','Content-Type');
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
     next();
-  })
+});
+
 
 const PORT = process.env.PORT || 10000;
 require('./db/connection');
