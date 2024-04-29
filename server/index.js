@@ -18,11 +18,11 @@ app.use((req, res, next) => {
 
 const PORT = process.env.PORT || 10000;
 require('./db/connection');
-const Users = require('./Model/User');
+const users = require('./Model/User');
 const UserModal = require('./Model/Data');
 
 app.post("/", async (req, res) => {
-    let user = new Users(req.body);
+    let user = new users(req.body);
     let result = await user.save();
     res.send(result);
 });
