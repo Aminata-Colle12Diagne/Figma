@@ -199,7 +199,7 @@ const addProduct = (e) => {
           <div className=' global' style={{background: "#Eeeee4", width: "118%"}}>    
           <div className="row d-flex flex-wrap">
     {hotels.map(hotel => (
-        <div className="col-md-3 mesCols" key={hotel.id} style={{height: "20rem"}}>
+        <div className="col-md-3 mesCols" key={hotel.id} style={{height: "100%"}}>
             <div className='card' >
             <div className="card-img">
     <img src={hotel.imageURL} alt={hotel.nom} className="mesImages" />
