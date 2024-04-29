@@ -13,7 +13,7 @@ function SignUp(props) {
     const collectionData = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('https://figma-k0b4.onrender.com/', {
+            const response = await fetch('https://figma-backend-x957.onrender.com/', {
                 method: 'POST',
                 body: JSON.stringify({ name, email, password }),
                 headers: {
