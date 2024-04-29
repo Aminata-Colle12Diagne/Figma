@@ -21,7 +21,7 @@ require('./db/connection');
 const Users = require('./Model/User');
 const UserModal = require('./Model/Data');
 
-app.post("/auth", async (req, res) => {
+app.post("/", async (req, res) => {
     let user = new Users(req.body);
     let result = await user.save();
     res.send(result);

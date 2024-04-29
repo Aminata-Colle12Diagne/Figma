@@ -11,7 +11,7 @@ function Login(props) {
     const collectionData = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('https://figma-k0b4.onrender.com/auth', {
+            const response = await fetch('https://figma-k0b4.onrender.com/', {
                 method: 'POST',
                 body: JSON.stringify({email, password }),
                 headers: {
