@@ -43,7 +43,7 @@ app.post('/forgot-password', (req, res) => {
             console.log(err);
         }
         const token = Buffer.toString("hex");
-        Users.findOne({ email: req.body.email })
+        users.findOne({ email: req.body.email })
             .then(user => {
                 if (!user) {
                     return res.status(422).json({ error: "User does not exist with that email" });
