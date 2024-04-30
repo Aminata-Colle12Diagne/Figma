@@ -12,7 +12,7 @@ console.log("Connected to Database");
 //     "rewrites": [
 //         {
 //             "source": "/(.*)",
-//             "destination": "/"
+//             "destination": "./index.js"
 //         }
 //     ]
 // }
