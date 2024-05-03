@@ -38,7 +38,7 @@ const addProduct = (e) => {
     e.preventDefault();
 
     axios
-        .post('https://figma-server.onrender.com/addHotel', {
+        .post('https://figma-backend-h1gm.onrender.com/addHotel', {
             nom,
             adresse,
             email,
@@ -64,7 +64,7 @@ const addProduct = (e) => {
        
     // Utilisez useEffect pour récupérer les données des hôtels lors du chargement du composant
     useEffect(() => {
-        axios.get('https://figma-server.onrender.com/getHotels')
+        axios.get('https://figma-backend-h1gm.onrender.com/getHotels')
             .then(response => {
                 setHotels(response.data);
             })
